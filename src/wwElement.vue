@@ -7,7 +7,15 @@
         { id: 2, name: 'Joe' },
       ]"
     >
-      <DTColumn v-for="column in content.columns" :field="column.field" :header="column.header" />
+      <DTColumn
+        v-for="column in [
+          { field: 'id', header: 'ID' },
+          { field: 'name', header: 'Name' },
+        ]"
+        :field="column.field"
+        :header="column.header"
+        :key="column.id"
+      />
     </DTDataTable>
     <h1>Does work</h1>
     <DTDataTable
