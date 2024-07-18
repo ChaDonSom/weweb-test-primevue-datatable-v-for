@@ -14,7 +14,7 @@
         ]"
         :field="column.field"
         :header="column.header"
-        :key="column.id"
+        :key="column.field"
       />
     </DTDataTable>
     <h1>Does work</h1>
